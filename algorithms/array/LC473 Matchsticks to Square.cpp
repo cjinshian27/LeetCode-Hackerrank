@@ -4,10 +4,10 @@ class Solution {
             if (index == matches.size())
                 return sidesLength[0] == sidesLength[1] && sidesLength[1] == sidesLength[2] && sidesLength[2] == sidesLength[3];
             for (int i = 0; i < 4; ++i) {
-                if (sidesLength[i] + matches[index] > target) // first
+                if (sidesLength[i] + matches[index] > target)
                     continue;
                 int j = i;
-                while (--j >= 0) // third
+                while (--j >= 0)
                     if (sidesLength[i] == sidesLength[j]) 
                         break;
                 if (j != -1) continue;
